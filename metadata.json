@@ -1,0 +1,8 @@
+{
+  "name": "FabricFlow BD - Commerce OS",
+  "description": "An AI-Native Commerce OS platform for fabric marketplace, ERP, AI marketing automation, and business intelligence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-slide-up: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-over: slide-over 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Upgraded global typography scale tokens for enhanced legibility */
+  --text-xs: 0.8125rem;    /* 13px - very clear on small screens */
+  --text-sm: 0.9375rem;    /* 15px - optimal for description and secondary text */
+  --text-base: 1.0625rem;  /* 17px - extremely readable body copy */
+  --text-lg: 1.25rem;      /* 20px */
+  --text-xl: 1.4375rem;    /* 23px */
+  --text-2xl: 1.75rem;     /* 28px */
+  --text-3xl: 2.125rem;    /* 34px */
+  --text-4xl: 2.625rem;    /* 42px */
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-over {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* Beautiful custom dark-theme scrollbars for the enterprise look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* Responsive root font scaling to improve mobile & desktop readability */
+html {
+  font-size: 15.5px; /* Base for mobile devices */
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16px; /* Smooth transition for tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 16.5px; /* Generous sizing for standard laptops */
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px; /* Gorgeous editorial legibility on larger desktop screens */
+  }
+}
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure high-legibility font weights for enterprise data tables */
+table th {
+  font-weight: 700 !important; /* Bold headings for easier vertical scanning */
+  letter-spacing: 0.05em;
+  color: #94a3b8 !important; /* text-slate-400 */
+}
+
+table td {
+  font-weight: 500; /* Medium font weight instead of normal for richer element distinction */
+}
+
+/* Ensure highly legible and high-contrast font weights for navigation lists */
+nav button, 
+nav a {
+  font-weight: 600 !important; /* Semi-bold for immediate actionable structure */
+}
+
